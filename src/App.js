@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import RedditPost from "./Components/RedditPost";
-import Sidebar from "./Components/Sidebar";
-import NavBar from "./Components/NavBar";
-import PostDetail from "./Components/PostDetail";
-import PopularSubreddits from "./Components/PopularSubreddits";
+import RedditPost from "./Components/RedditPost/RedditPost"
+import Sidebar from "./Components/Sidebar/Sidebar";
+import NavBar from "./Components/NavBar/NavBar";
+import PostDetail from "./Components/PostDetail/PostDetail";
+import PopularSubreddits from "./Components/PopularSubreddits/PopularSubreddits";
 import "./App.css";
 
 const App = () => {
