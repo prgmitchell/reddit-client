@@ -171,7 +171,7 @@ const App = () => {
                 onclick={handlePostClick}
                 selftext={post.data.selftext}
                 post={post}
-                createdTime={post.data.createdTime}
+                created_utc={post.data.created_utc}
               />
             ))}
           </div>

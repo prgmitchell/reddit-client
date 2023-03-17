@@ -8,7 +8,7 @@ const RedditPost = ({
   selftext,
   onclick,
   post,
-  createdTime,
+  created_utc,
 }) => {
   const [thumbnailLoaded, setThumbnailLoaded] = useState(false);
   const postExcerpt = selftext.slice(0, 100) + (selftext ? "..." : "");
@@ -24,7 +24,7 @@ const RedditPost = ({
 
   const timeSincePosted = () => {
     const now = new Date();
-    const createdDate = new Date(createdTime * 1000);
+    const createdDate = new Date(created_utc * 1000);
     const seconds = Math.floor((now - createdDate) / 1000);
 
     const intervals = [

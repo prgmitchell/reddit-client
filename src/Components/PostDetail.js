@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 const PostDetail = ({ post, onGoBack }) => {
   const [comments, setComments] = useState([]);
   const [isImageFullSize, setIsImageFullSize] = useState(false);
-  const { title, author, selftext, url, createdTime } = post.data;
+  const { title, author, selftext, url, created_utc } = post.data;
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const PostDetail = ({ post, onGoBack }) => {
         </div>
         <div className="author">
           <p>by {author}</p>
-          <p>Posted on {formatTimestamp(createdTime)}</p>
+          <p>Posted on {formatTimestamp(created_utc)}</p>
         </div>
       </div>
       <div className="post-content">
@@ -76,7 +76,7 @@ const PostDetail = ({ post, onGoBack }) => {
                   <ReactMarkdown>{comment.data.body}</ReactMarkdown>
                 </p>
                 <p className="comment-time">
-                  Posted on {formatTimestamp(comment.data.createdTime)}
+                  Posted on {formatTimestamp(comment.data.created_utc)}
                 </p>
               </div>
             ))}
