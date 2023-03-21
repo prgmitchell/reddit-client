@@ -23,31 +23,22 @@ const App = () => {
     const fetchPosts = async () => {
       const response = await axios.get(
         `https://www.reddit.com/r/${subreddit}/${sortOption}.json?limit=10${
-          after ? `&after=${after}` : ""
+          after && page > 1 ? `&after=${after}` : ""
         }`
       );
       setPosts(response.data.data.children);
       setAfter(response.data.data.after);
     };
-
+  
     fetchPosts();
   }, [subreddit, sortOption, page]);
-
+  
   useEffect(() => {
-    const fetchPostsOnSubredditChange = async () => {
-      const response = await axios.get(
-        `https://www.reddit.com/r/${subreddit}/${sortOption}.json?limit=10`
-      );
-      setPosts(response.data.data.children);
-      setAfter(response.data.data.after);
-    };
-
-    fetchPostsOnSubredditChange();
-  }, [subreddit, sortOption]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
+    if (selectedPost || subreddit || page) {
+      window.scrollTo(0, 0);
+    }
   }, [selectedPost, subreddit, page]);
+  
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
