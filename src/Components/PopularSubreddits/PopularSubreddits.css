@@ -1,11 +1,9 @@
 .popular-subreddits-container {
-  background-color: #fff;
+  background: #fff;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 40px;
+  margin: 0 40px 20px 20px;
 }
 
 .popular-subreddits-header {
@@ -13,11 +11,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
-}
-
-.popular-subreddits-header h2 {
-  font-size: 24px;
-  font-weight: bold;
+  font: bold 24px sans-serif;
 }
 
 .popular-subreddit {
@@ -28,11 +22,11 @@
 }
 
 .popular-subreddit:last-child {
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 .popular-subreddit:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 ul {

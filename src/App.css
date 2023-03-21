@@ -1,6 +1,6 @@
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f6f7f9;
+  font: 16px "Arial", sans-serif;
+  background: #f6f7f9;
   color: #333;
   margin: 0;
   padding: 0;
@@ -38,10 +38,9 @@ input {
 button {
   margin-left: 1rem;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
+  font: bold 1rem sans-serif;
   color: #fff;
-  background-color: #0079d3;
+  background: #0079d3;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -61,8 +60,7 @@ button:hover {
 
 .posts {
   flex: 3;
-  margin-right: 20px;
-  margin-top: 35px;
+  margin: 35px 20px 0 0;
 }
 
 .pagnums {
@@ -72,7 +70,7 @@ button:hover {
 }
 
 .page-number {
-  background-color: #f8f9fa;
+  background: #f8f9fa;
   border: 1px solid #ced4da;
   color: #495057;
   cursor: pointer;
@@ -83,14 +81,10 @@ button:hover {
   transition: background-color 0.2s, color 0.2s;
 }
 
-.page-number:hover {
-  background-color: #495057;
-  color: #ffffff;
-}
-
+.page-number:hover,
 .page-number.selected {
-  background-color: #495057;
-  color: #ffffff;
+  background: #495057;
+  color: #fff;
 }
 
 .sidebar-section {

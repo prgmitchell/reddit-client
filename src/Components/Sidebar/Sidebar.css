@@ -14,37 +14,29 @@
   text-align: center;
 }
 
-.sidebar-reddit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .sidebar ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 .favorite-subreddit {
-  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
   margin-bottom: 10px;
   cursor: pointer;
+  background-color: #fff;
 }
 
 .favorite-subreddit:hover {
   background-color: #f7f7f7;
-  border-color: #c5c5c5;
 }
 
 .remove-favorite-btn {
-  background-color: #f8f9fa;
   border: none;
   color: #dc3545;
+  background-color: #f8f9fa;
   cursor: pointer;
 }
 
