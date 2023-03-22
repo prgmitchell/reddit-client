@@ -36,13 +36,13 @@ const PostDetail = ({ post, onGoBack }) => {
   return (
     <div className="post-detail">
       <div className="headercombo">
-        <div className="post-title">
+        <div>
           <button onClick={onGoBack} className="back-arrow">
             &larr;
           </button>
           <h2>{title}</h2>
         </div>
-        <div className="author">
+        <div>
           <p>by {author}</p>
           <p>Posted on {formatTimestamp(created_utc)}</p>
         </div>

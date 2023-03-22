@@ -40,8 +40,9 @@
   background-color: #005a9b;
 }
 
-.post-detail .post-title {
+.post-detail .headercombo {
   display: flex;
+  justify-content: space-between;
 }
 
 .post-detail .back-arrow {
@@ -59,20 +60,15 @@
   background-color: #f7f7f7;
 }
 
-.author {
-  margin-left: 85px;
-}
-
-.small-size,
-.full-size {
+.post-image {
   cursor: pointer;
 }
 
-.small-size {
+.post-image.small-size {
   max-width: 300px;
   max-height: 300px;
 }
 
-.full-size {
+.post-image.full-size {
   max-width: 100%;
 }
